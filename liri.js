@@ -8,6 +8,15 @@ var spotify = new Spotify(keys.spotify);
 var command = process.argv[2];
 var input = "";
 
+function textMaker(input) {
+    fs.appendFile("log.txt", input, (err) => {
+        if (err) throw err;
+    });
+}
+
+
+
+
 for (let i = 3; i < process.argv.length; i++) {
     input += process.argv[i];
     if (i !== process.argv.length - 1) {
@@ -17,9 +26,11 @@ for (let i = 3; i < process.argv.length; i++) {
 function spotifyInp(songName) {
     spotify.search({ type: 'track', query: songName }, function (err, data) {
 
-        var message = "Album name: " + data.tracks.items[0].album.name + "\n";
-        message += "Artist name: " + data.tracks.items[0].album.artists[0].name + "\n";
-        message += "Song name: " + data.tracks.items[0].name + "\n";
+        var message = "Album name: " + data.tracks.items[0].album.name + "\n"+ "\n";
+        message += "Artist name: " + data.tracks.items[0].album.artists[0].name + "\n"+ "\n";
+        message += "Song name: " + data.tracks.items[0].name + "\n"+ "\n";
+        message += "Preview link: " + data.tracks.items[0].preview_url + "\n"+ "\n";
+        message += ".........." + "\n" + "\n";
 
         if (err) {
             return console.log('Error occurred: ' + err);
@@ -36,9 +47,7 @@ function spotifyInp(songName) {
             // messages += "Preview link: " + data.tracks.items[0].preview_url + "\n";
         }
         console.log(message);
-        fs.appendFile("log.txt", message, (err) => {
-            if (err) throw err;
-        });
+        textMaker(message);
     });
 }
 switch (command) {
@@ -51,18 +60,17 @@ switch (command) {
             if (!error && response.statusCode === 200) {
                 // Parse the body of the site
                 var concert = JSON.parse(body);
-
+                var momentDate = moment(concert[0].datetime).format("MM/DD/YYYY");
                 var venName = concert[0].venue.name;
-                var venDate = concert[0].datetime;
+                var venDate = momentDate;
                 var venCity = concert[0].venue.city
 
-                var message = "Venue name: " + venName + "\n";
-                message += "Venue date: " + venDate + "\n";
-                message += "Venue city: " + venCity + "\n";
-                // console.log(message);
-                fs.appendFile("log.txt", message, (err) => {
-                    if (err) throw err;
-                });
+                var message = "Venue name: " + venName + "\n"+ "\n";
+                message += "Venue date: " + venDate + "\n"+ "\n";
+                message += "Venue city: " + venCity + "\n"+ "\n";
+                message += ".........." + "\n"+ "\n";
+                console.log(message);
+                textMaker(message);
             };
         });
         break;
@@ -79,19 +87,18 @@ switch (command) {
                 // Parse the body of the site
                 var movie = JSON.parse(body);
 
-                var message = "Movie name: " + movie.Title + "\n";
-                message += "Release date: " + movie.Released + "\n";
-                message += "IMDB rating: " + movie.imdbRating + "\n";
-                message += "Rotten Tomato rating: " + movie.Ratings[0].Value + "\n";
-                message += "Country produced: " + movie.Country + "\n";
-                message += "Languages: " + movie.Language + "\n";
-                message += "Plot: " + movie.Plot + "\n";
-                message += "Actors: " + movie.Actors + "\n";
+                var message = "Movie name: " + movie.Title + "\n" + "\n";
+                message += "Release date: " + movie.Released + "\n" + "\n";
+                message += "IMDB rating: " + movie.imdbRating + "\n" + "\n";
+                message += "Rotten Tomato rating: " + movie.Ratings[0].Value + "\n" + "\n";
+                message += "Country produced: " + movie.Country + "\n" + "\n";
+                message += "Languages: " + movie.Language + "\n" + "\n";
+                message += "Plot: " + movie.Plot + "\n" + "\n";
+                message += "Actors: " + movie.Actors + "\n" + "\n";
+                message += ".........." + "\n"+ "\n";
 
                 console.log(message);
-                fs.appendFile("log.txt", message, (err) => {
-                    if (err) throw err;
-                });
+               textMaker(message);
             }
         });
         break;
