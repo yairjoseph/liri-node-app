@@ -1,10 +1,8 @@
-Album name: The Sign (US Album) [Remastered]
+Venue name: State Farm Stadium
 
-Artist name: Ace of Base
+Venue date: 09/19/2018
 
-Song name: The Sign
-
-Preview link: https://p.scdn.co/mp3-preview/4c463359f67dd3546db7294d236dd0ae991882ff?cid=d21d822d5217410a933fc15367b6730b
+Venue city: Glendale
 
 ..........
 
@@ -15,16 +13,6 @@ Artist name: Kanye West
 Song name: Good Life
 
 Preview link: null
-
-..........
-
-Album name: The Hits--Chapter One
-
-Artist name: Backstreet Boys
-
-Song name: I Want It That Way
-
-Preview link: https://p.scdn.co/mp3-preview/e72a05dc3f69c891e3390c3ceaa77fad02f6b5f6?cid=d21d822d5217410a933fc15367b6730b
 
 ..........
 
@@ -43,6 +31,34 @@ Languages: English
 Plot: Steven Matrix is one of the underworld's foremost hitmen until his luck runs out, and someone puts a contract out on him. Shot in the forehead by a .22 pistol, Matrix "dies" and finds ...
 
 Actors: Nick Mancuso, Phillip Jarrett, Carrie-Anne Moss, John Vernon
+
+..........
+
+Movie name: Mr. Nobody
+
+Release date: 26 Sep 2013
+
+IMDB rating: 7.9
+
+Rotten Tomato rating: 7.9/10
+
+Country produced: Belgium, Germany, Canada, France, USA, UK
+
+Languages: English, Mohawk
+
+Plot: A boy stands on a station platform as a train is about to leave. Should he go with his mother or stay with his father? Infinite possibilities arise from this decision. As long as he doesn't choose, anything is possible.
+
+Actors: Jared Leto, Sarah Polley, Diane Kruger, Linh Dan Pham
+
+..........
+
+Album name: The Hits--Chapter One
+
+Artist name: Backstreet Boys
+
+Song name: I Want It That Way
+
+Preview link: https://p.scdn.co/mp3-preview/e72a05dc3f69c891e3390c3ceaa77fad02f6b5f6?cid=d21d822d5217410a933fc15367b6730b
 
 ..........
 

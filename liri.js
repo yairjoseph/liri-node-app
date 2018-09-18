@@ -40,7 +40,7 @@ function spotifyInp(songName) {
         }
         if (data.tracks.items[0].preview_url === null) {
             // messages += "Sorry no preview link" + "\n";
-            console.log("Sorry no preview link");
+            console.log("Sorry no preview link" + "\n");
         }
         else {
             console.log("Preview link: " + data.tracks.items[0].preview_url);
